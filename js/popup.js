@@ -13,34 +13,34 @@ const popupLimitNode = document.querySelector('.popup-limit');
 
 
 popupNode.addEventListener('click', (event) => {
-    const isClickOutsideContent = !event.composedPath().includes(popupContentNode);
+	const isClickOutsideContent = !event.composedPath().includes(popupContentNode);
 
-    if (isClickOutsideContent) {
-        togglePopup();
-    }
+	if (isClickOutsideContent) {
+		togglePopup();
+	}
 });
 
 function togglePopup(elem) {
-    popupNode.classList.toggle(POPUP_OPENED_CLASSNAME);
-    bodyNode.classList.toggle(BODY_FIXED_CLASSNAME);
+	popupNode.classList.toggle(POPUP_OPENED_CLASSNAME);
+	bodyNode.classList.toggle(BODY_FIXED_CLASSNAME);
 
-    popupItems.forEach((item) => {
-        item.classList.add('invisible');
-    });
+	popupItems.forEach((item) => {
+		item.classList.add('invisible');
+	});
 
-    switch (elem) {
-        case 1:
-            popupInputNode.classList.remove('invisible');
-            break;
-        case 2:
-            popupSelectNode.classList.remove('invisible');
-            break;
-        case 3:
-            popupLimitNode.classList.remove('invisible');
-            break;
-        default:
-            console.log('default');
-    }
+	switch (elem) {
+		case 1:
+			popupInputNode.classList.remove('invisible');
+			break;
+		case 2:
+			popupSelectNode.classList.remove('invisible');
+			break;
+		case 3:
+			popupLimitNode.classList.remove('invisible');
+			break;
+		default:
+			//console.log('default');
+	}
 }
 
 btnCloseNode.addEventListener('click', togglePopup);
