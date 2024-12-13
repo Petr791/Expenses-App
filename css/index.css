@@ -69,7 +69,7 @@ ul {
 .expenses__input-wrapper {
     margin-bottom: 18px;
     padding: 10px 20px 10px 17px;
-    max-width: 484px;
+    max-width: 100%;
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 32px;
@@ -83,6 +83,7 @@ ul {
     width: 100%;
     border: none;
     font-size: inherit;
+    outline: none;
 }
 
 .expenses__input::placeholder {
@@ -101,7 +102,7 @@ ul {
 .expenses__category-wrapper {
     margin-bottom: 27px;
     padding: 10px 20px 10px 17px;
-    max-width: 484px;
+    max-width: 100%;
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 32px;

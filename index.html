@@ -2,113 +2,113 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expenses App</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/index.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Expenses App</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <div class="app">
-        <div class="container">
+	<div class="app">
+		<div class="container">
 
-            <h1 class="app__title">Приложение Expenses</h1>
-            <h2 class="expenses__title">Учет расходов</h2>
-            <div class="row">
-                <div class="col col__left">
-                    <div class="expenses__input-wrapper rub">
-                        <input class="js-expenses__input expenses__input" type="number" placeholder="" min="0">
-                    </div>
-                    <div class="expenses__category-wrapper">
-                        <select id="category" class="js-expenses__category expenses__category">
+			<h1 class="app__title">Приложение Expenses</h1>
+			<h2 class="expenses__title">Учет расходов</h2>
+			<div class="row">
+				<div class="col col__left">
+					<div class="expenses__input-wrapper rub">
+						<input class="js-expenses__input expenses__input" type="number" placeholder="" min="0">
+					</div>
+					<div class="expenses__category-wrapper">
+						<select id="category" class="js-expenses__category expenses__category">
 							<option hidden disabled selected value="Категория">Категория</option>
 							<option value="Продукты">Продукты</option>
 							<option value="Кафе и рестораны">Кафе и рестораны</option>
 							<option value="Квартира">Квартира</option>
 							<option value="Авто">Авто</option>
 						</select>
-                    </div>
-                </div>
+					</div>
+				</div>
 
-                <div class="col col__right">
-                    <button class="js-expenses__btn expenses__btn expenses__btn--add">Добавить</button>
-                </div>
-            </div>
+				<div class="col col__right">
+					<button class="js-expenses__btn expenses__btn expenses__btn--add">Добавить</button>
+				</div>
+			</div>
 
-            <!--  -->
-            <div class="row">
-                <div class="col col__left stats">
+			<!--  -->
+			<div class="row">
+				<div class="col col__left stats">
 
-                    <div class="stats__limit">
-                        <span class="label">Лимит: </span>
-                        <span class="js-limit expenses__limit rub">10000</span>
-                        <button class="js-limit-btn expenses__icon-wrapper limit-btn">
+					<div class="stats__limit">
+						<span class="label">Лимит: </span>
+						<span class="js-limit expenses__limit rub">10000</span>
+						<button class="js-limit-btn expenses__icon-wrapper limit-btn">
 							<img src="./img/limit_icon.png" alt="Картинка записи лимита" class="limit-btn__icon">
-							</button>
-                    </div>
-                    <div class="stats__sum">
-                        <span class="label">Сумма: </span>
-                        <span class="js-sum expenses__sum rub"></span>
-                    </div>
-                    <div class="stats__status">
-                        <span class="label">Статус: </span>
-                        <span class="js-status expenses__status"></span>
-                    </div>
+						</button>
+					</div>
+					<div class="stats__sum">
+						<span class="label">Сумма: </span>
+						<span class="js-sum expenses__sum rub"></span>
+					</div>
+					<div class="stats__status">
+						<span class="label">Статус: </span>
+						<span class="js-status expenses__status"></span>
+					</div>
 
-                    <div class="expenses__btn-wrapper">
-                        <button class="js-clear-btn expenses__btn expenses__btn--clear">Сбросить расходы</button>
-                    </div>
-                </div>
+					<div class="expenses__btn-wrapper">
+						<button class="js-clear-btn expenses__btn expenses__btn--clear">Сбросить расходы</button>
+					</div>
+				</div>
 
-                <div class="col col__right col-history">
-                    <h2 class="col-history__title">История</h2>
-                    <div class=" col-history__list-wrapper">
-                        <ol class="js-history__list history__list"></ol>
-                    </div>
-                </div>
+				<div class="col col__right col-history">
+					<h2 class="col-history__title">История:</h2>
+					<div class=" col-history__list-wrapper">
+						<ol class="js-history__list history__list"></ol>
+					</div>
+				</div>
 
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 
-    <!-- popup -->
-    <div class="popup js-popup">
-        <div class="popup__content js-popup__content">
-            <div class="popup__close-btn js-popup__close-btn"></div>
-            <div class="popup-inner">
-                <div class="js-popup-item popup-limit invisible">
-                    <p class="popup__title">Новый лимит</p>
-                    <div class="row">
-                        <div class="col col__left">
+	<!-- popup -->
+	<div class="popup js-popup">
+		<div class="popup__content js-popup__content">
+			<div class="popup__close-btn js-popup__close-btn"></div>
+			<div class="popup-inner">
+				<div class="js-popup-item popup-limit invisible">
+					<p class="popup__title">Новый лимит</p>
+					<div class="row">
+						<div class="col col__left">
 
-                            <div class="popup-col-inner">
-                                <div class="expenses__input-wrapper rub">
-                                    <input class="js-popup-limit__input expenses__input" type="number" placeholder="" min="0">
-                                </div>
-                                <p class="new-limit__desc">Задайте новый лимит!</p>
-                            </div>
+							<div class="popup-col-inner">
+								<div class="expenses__input-wrapper rub">
+									<input class="js-popup-limit__input expenses__input" type="number" placeholder="" min="0">
+								</div>
+								<p class="new-limit__desc">Задайте новый лимит!</p>
+							</div>
 
-                        </div>
-                        <div class="col col__right">
-                            <button class="js-popup-limit__btn expenses__btn expenses__btn--add">Задать лимит</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="js-popup-item popup-input invisible">
-                    <p class="popup__desc">Не задана сумма!</p>
-                </div>
-                <div class="js-popup-item popup-select invisible">
-                    <p class="popup__desc">Выберите категорию!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /popup -->
+						</div>
+						<div class="col col__right">
+							<button class="js-popup-limit__btn expenses__btn expenses__btn--add">Задать лимит</button>
+						</div>
+					</div>
+				</div>
+				<div class="js-popup-item popup-input invisible">
+					<p class="popup__desc">Не задана сумма!</p>
+				</div>
+				<div class="js-popup-item popup-select invisible">
+					<p class="popup__desc">Выберите категорию!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /popup -->
 
-    <script src="./js/jquery-3.7.0.min.js"></script>
-    <script src="./js/popup.js"></script>
-    <script src="./js/index.js"></script>
+	<script src="./js/jquery-3.7.0.min.js"></script>
+	<script src="./js/popup.js"></script>
+	<script src="./js/index.js"></script>
 </body>
 
 </html>
