@@ -1,0 +1,13 @@
+@font-face {
+    font-weight: 400;
+    /* Соответствует значению normal */
+    font-family: Inter-local;
+    src: url("../fonts/Inter_18pt-Regular.ttf");
+}
+
+@font-face {
+    font-weight: 700;
+    /* Соответствует значению bold */
+    font-family: Inter-local;
+    src: url("../fonts/Inter_18pt-Bold.ttf");
+}

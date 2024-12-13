@@ -1,0 +1,394 @@
+@import url('./fonts.css');
+@import url('./popup.css');
+body {
+    font-family: "Inter-local", serif;
+}
+
+ol,
+ul {
+    list-style: decimal;
+}
+
+.expenses__btn {
+    padding: 10px 10px;
+    max-width: 100%;
+    font-family: inherit;
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.app {
+    padding-top: 20px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.app__title {
+    margin-bottom: 50px;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.col {
+    flex: 1 1 calc(50% - 14px);
+}
+
+.col__left {}
+
+.col__right {}
+
+.expenses__title {
+    margin-bottom: 41px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: #000000;
+}
+
+
+/*  */
+
+.expenses__input-wrapper {
+    margin-bottom: 18px;
+    padding: 10px 20px 10px 17px;
+    max-width: 484px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.expenses__input {
+    width: 100%;
+    border: none;
+    font-size: inherit;
+}
+
+.expenses__input::placeholder {
+    /* font-size: 32px;
+    line-height: 39px;
+    font-weight: 400;
+    color: #979797; */
+}
+
+.rub::after {
+    content: " руб.";
+}
+
+.expenses__input-wrapper::after {}
+
+.expenses__category-wrapper {
+    margin-bottom: 27px;
+    padding: 10px 20px 10px 17px;
+    max-width: 484px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.expenses__category {
+    width: 100%;
+    border: none;
+    font-size: inherit;
+}
+
+.expenses__category option {
+    width: 50%;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.expenses__btn--add {
+    margin-bottom: 51px;
+    width: 370px;
+    color: #ffffff;
+    background-color: #0094FF;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.expenses__btn--add:active {
+    background-color: #003ce2;
+}
+
+
+/*  */
+
+.stats {}
+
+.stats__limit {
+    margin-bottom: 13px;
+    /* overflow-x: auto; */
+}
+
+.stats__sum {
+    margin-bottom: 35px;
+}
+
+.stats__status {
+    margin-bottom: 40px;
+}
+
+.label {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #000000;
+}
+
+.expenses__limit {
+    margin-right: 12px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #000000;
+}
+
+.limit-btn {
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.limit-btn:hover {
+    opacity: 0.5;
+}
+
+.limit-btn__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.expenses__sum {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #000000;
+}
+
+.expenses__status {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #039100;
+}
+
+.app__status--red {
+    color: red;
+}
+
+.expenses__btn--clear {
+    width: 100%;
+    color: #ffffff;
+    background-color: #ff0000;
+    transition: all .3s linear;
+}
+
+.expenses__btn--clear:active {
+    background-color: #ba0101;
+}
+
+
+/*  */
+
+.col-history__title {
+    margin-bottom: 21px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: #000000;
+}
+
+.col-history__list-wrapper {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.history__list {
+    list-style-position: inside;
+}
+
+.history__list li {
+    margin-bottom: 8px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #000000;
+}
+
+.invisible {
+    display: none;
+}
+
+
+/*  */
+
+
+/* media queries */
+
+@media (hover: hover) {
+    .expenses__btn--add:hover {
+        background-color: #003ce2;
+    }
+    .expenses__btn--clear:hover {
+        background-color: #ba0101;
+    }
+    .expenses__icon-wrapper:hover {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 961px) {
+    .expenses__limit,
+    .expenses__sum {
+        font-size: 26px;
+        line-height: 26px;
+    }
+    .expenses__limit {
+        margin-right: 6px;
+    }
+    .expenses__icon-wrapper {
+        width: 28px;
+        height: 28px;
+    }
+    .history__list li {
+        margin-bottom: 8px;
+        font-size: 26px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 850px) {
+    .row {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 30px;
+    }
+    .col {
+        width: 100%;
+    }
+    .expenses__category-wrapper {
+        margin-bottom: 20px;
+    }
+    .stats__sum {
+        margin-bottom: 11px;
+    }
+    .stats__status {
+        margin-bottom: 28px;
+    }
+    .expenses__btn-wrapper {
+        text-align: center;
+    }
+    .expenses__btn--clear {
+        max-width: 462px;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 590px) {}
+
+@media (max-width: 550px) {
+    .app {
+        padding-top: 25px;
+    }
+    .app__title {
+        margin-bottom: 33px;
+        font-size: 34px;
+        line-height: 42px;
+    }
+    /*  */
+    .expenses__input-wrapper {
+        margin-bottom: 14px;
+        padding: 6px 10px;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .expenses__category-wrapper {
+        margin-bottom: 11px;
+        padding: 6px 10px;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    /*  */
+    .label {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .stats__sum,
+    .stats__status,
+    .stats__limit {
+        margin-bottom: 8px;
+    }
+    .stats__status {
+        margin-bottom: 20px;
+    }
+    .expenses__limit,
+    .expenses__sum,
+    .expenses__status {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .expenses__title {
+        margin-bottom: 20px;
+        font-size: 27px;
+        line-height: 29px;
+    }
+    .expenses__btn {
+        margin-bottom: 25px;
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .expenses__btn--clear {
+        margin-bottom: 0px;
+        max-width: 378px;
+    }
+    .col-history__title {
+        margin-bottom: 17px;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .history__list li {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 350px) {
+    .expenses__btn {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
